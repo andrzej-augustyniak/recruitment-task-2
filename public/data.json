@@ -1,0 +1,133 @@
+{
+	"colors": [
+		{
+			"id": 1,
+			"name": "volcano red",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 0
+		},
+		{
+			"id": 2,
+			"name": "jet black",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 2000
+		},
+		{
+			"id": 3,
+			"name": "meteorite silver",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 2000
+		},
+		{
+			"id": 4,
+			"name": "sea storm",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 2000
+		},
+		{
+			"name": "madagaskar orange",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 2000
+		},
+		{
+			"id": 5,
+			"name": "arizona bronze",
+			"type": "metalic",
+			"hex": "#FF0000",
+			"price": 2000
+		},
+		{
+			"id": 6,
+			"name": "morning frost white",
+			"type": "pearl",
+			"hex": "#FF0000",
+			"price": 5000
+		},
+		{
+			"id": 7,
+			"name": "yellow tang",
+			"type": "pearl",
+			"hex": "#FF0000",
+			"price": 5000
+		}
+	],
+	"transmissions": [
+		{
+			"id": 1,
+			"name": "6 MT",
+			"type": "manual",
+			"price": 4000
+		},
+		{
+			"id": 2,
+			"name": "7 DCT",
+			"type": "automatic",
+			"price": 8000
+		}
+	],
+	"engines": [
+		{
+			"id": 1,
+			"name": "5.2L 532BHP",
+			"type": "petrol",
+			"capacity": 5200,
+			"power": 532,
+			"price": 50000,
+			"transmissions": [2]
+		},
+		{
+			"id": 2,
+			"name": "4.2L 443BHP",
+			"type": "petrol",
+			"capacity": 4200,
+			"power": 443,
+			"price": 30000,
+			"transmissions": [2]
+		},
+		{
+			"id": 3,
+			"name": "3.6L 374BHP",
+			"type": "petrol",
+			"capacity": 3600,
+			"power": 374,
+			"price": 25000,
+			"transmissions": [1,2]
+		},
+		{
+			"id": 4,
+			"name": "2.0L 166BHP",
+			"type": "petrol",
+			"capacity": 2000,
+			"power": 166,
+			"price": 15000,
+			"transmissions": [1]
+		}
+	],
+	"models": [
+		{
+			"id": 1,
+			"name": "PRO RS3",
+			"engines": [1]
+		},
+		{
+			"id": 2,
+			"name": "UBER RS2",
+			"engines": [2,3]
+		},
+		{
+			"id": 3,
+			"name": "STANDARD",
+			"engines": [3,4]
+		},
+		{
+			"id": 4,
+			"name": "WK",
+			"engines": [4]
+		}
+	]
+}

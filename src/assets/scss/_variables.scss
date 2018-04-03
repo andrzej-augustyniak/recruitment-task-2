@@ -1,0 +1,17 @@
+$font-family: 'Roboto', sans-serif !default;
+
+$palette-lightgray: #f3f3f3 !default;
+$palette-gray: #d5dae3 !default;
+
+$primary-color: #002C71 !default;
+$secondary-color: #FFA640 !default;
+$background-color: #222222 !default;
+
+$text-color: #dddddd !default;
+$text-color-muted: #aaaaaa !default;
+
+@mixin desktop {
+	@media (min-width: 40em) {
+		@content;
+	}
+}
