@@ -2,58 +2,38 @@
 	"colors": [
 		{
 			"id": 1,
-			"name": "volcano red",
+			"name": "mclaren orange",
 			"type": "metalic",
-			"hex": "#FF0000",
+			"hex": "#fe7b20",
 			"price": 0
 		},
 		{
 			"id": 2,
-			"name": "jet black",
+			"name": "onyx black",
 			"type": "metalic",
-			"hex": "#FF0000",
+			"hex": "#242321",
 			"price": 2000
 		},
 		{
 			"id": 3,
-			"name": "meteorite silver",
+			"name": "mantis green",
 			"type": "metalic",
-			"hex": "#FF0000",
-			"price": 2000
+			"hex": "#61cb20",
+			"price": 3000
 		},
 		{
 			"id": 4,
-			"name": "sea storm",
+			"name": "volcano orange",
 			"type": "metalic",
-			"hex": "#FF0000",
-			"price": 2000
-		},
-		{
-			"name": "madagaskar orange",
-			"type": "metalic",
-			"hex": "#FF0000",
-			"price": 2000
+			"hex": "#aa2506",
+			"price": 3000
 		},
 		{
 			"id": 5,
-			"name": "arizona bronze",
+			"name": "white",
 			"type": "metalic",
-			"hex": "#FF0000",
-			"price": 2000
-		},
-		{
-			"id": 6,
-			"name": "morning frost white",
-			"type": "pearl",
-			"hex": "#FF0000",
-			"price": 5000
-		},
-		{
-			"id": 7,
-			"name": "yellow tang",
-			"type": "pearl",
-			"hex": "#FF0000",
-			"price": 5000
+			"hex": "#ffffff",
+			"price": 4000
 		}
 	],
 	"transmissions": [
@@ -112,22 +92,68 @@
 		{
 			"id": 1,
 			"name": "PRO RS3",
+			"price": 200000,
 			"engines": [1]
 		},
 		{
 			"id": 2,
 			"name": "UBER RS2",
+			"price": 160000,
 			"engines": [2,3]
 		},
 		{
 			"id": 3,
 			"name": "STANDARD",
-			"engines": [3,4]
+			"price": 125000,
+			"engines": [2,3,4]
 		},
 		{
 			"id": 4,
 			"name": "WK",
+			"price": 100000,
 			"engines": [4]
+		}
+	],
+	"options": [
+		{
+			"id": 1,
+			"name": "Panoramic roof",
+			"price": 5000
+		},
+		{
+			"id": 2,
+			"name": "McLaren 8 Speaker System",
+			"price": 3600
+		},
+		{
+			"id": 3,
+			"name": "Rear View Camera Including Parking Sensors",
+			"price": 2250
+		},
+		{
+			"id": 4,
+			"name": "Vehicle Tracking System",
+			"price": 2000
+		},
+		{
+			"id": 5,
+			"name": "Front and Rear Parking Sensors",
+			"price": 2000
+		},
+		{
+			"id": 6,
+			"name": "Fire Extinguisher",
+			"price": 500
+		},
+		{
+			"id": 7,
+			"name": "Warning Triangle and First Aid Kit",
+			"price": 500
+		},
+		{
+			"id": 8,
+			"name": "Lithium-ion Battery Charger",
+			"price": 1000
 		}
 	]
 }

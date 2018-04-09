@@ -1,18 +1,24 @@
-# recruitment-task-2
+# Recruitment task for Farm51
 
-> Recruitment task for Farm 51
-
-## Build Setup
-
-``` bash
-# install dependencies
+#### install dependencies
+```
 npm install
-
-# serve with hot reload at localhost:8080
+```
+#### serve at localhost:8080
+```
 npm run dev
-
-# build for production with minification
+```
+#### serve with hot reload at localhost:8080
+```
+npm run hot
+```
+#### build for production with minification
+```
 npm run build
 ```
+#### notes
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* There should be a compatibility check on item selection before any other action. Prompt should be displayed if compatibility check fails.
+* Rendered car implementation could contain several overlapping image layers with transparent background. Currently it only takes into consideration color selection.
+* Class naming could be refactored. BEM or just namespacing all the classes. Depending on needs.
+* Tabs component should be implemented for easier navigation, currently it's hardcoded

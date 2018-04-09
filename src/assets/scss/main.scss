@@ -1,0 +1,418 @@
+/* VUE SPECIFIC */
+
+[v-cloak] {
+	display: none
+}
+
+/* BASE */
+.button {
+	display: inline-block;
+	width: auto;
+	padding: 1em 1.5em;
+	background-color: lighten($primary-color, 5);
+	text-transform: uppercase;
+	color: lighten($primary-color, 35);
+	font-weight: 500;
+	text-decoration: none;
+	transition: all .25s cubic-bezier(1, 0, 0, 1);
+
+	&:hover {
+		color: white;
+		background-color: $primary-color;
+	}
+
+	&.is-outline {
+		border: 1px solid $primary-color;
+		background-color: transparent;
+		color: darken($primary-color, 35);
+	}
+
+	&.next {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		margin-left: auto;
+		z-index: 1;
+
+		@include desktop {
+			width: auto;
+		}
+
+		&.is-active {
+			transform: translateY(100%);
+		}
+	}
+}
+
+.columns {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	@include desktop {
+		flex-direction: row;
+	}
+
+	.column {
+		width: 100%;
+		flex-basis: auto;
+
+		// column gutter on desktop
+		@include desktop {
+	    	&:not(:first-child) {
+	    		margin-left: 1.5em;
+	    	}
+
+	    	&:not(:last-child) {
+	    		margin-right: 1.5em;
+	    	}
+	    }
+	}
+}
+
+.is-disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+i.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+	&.right {
+	    transform: rotate(-45deg);
+	    -webkit-transform: rotate(-45deg);
+	}
+
+	&.left {
+	    transform: rotate(135deg);
+	    -webkit-transform: rotate(135deg);
+	}
+
+	&.up {
+	    transform: rotate(-135deg);
+	    -webkit-transform: rotate(-135deg);
+	}
+
+	&.down {
+	    transform: rotate(45deg);
+	    -webkit-transform: rotate(45deg);
+	}
+}
+
+/* CAR CONFIGURATOR */
+
+.car-config-wrapper {
+	align-self: center;
+	width: 100%;
+
+	@include desktop {
+		max-width: $content-width;
+		padding: 0 2em;
+	}
+}
+
+.car-config {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	
+	padding-bottom: 5em;
+
+	font-family: $font-family;
+	font-size: 0.875rem;
+	color: $text-color;
+	background-color: $background-color;
+
+	@include desktop {
+		font-size: 1rem;
+	}
+}
+
+.card {
+	position: relative;
+}
+
+.card-title {
+	margin: 1.5em 1.5em 2em 1.5em;
+	letter-spacing: 0.0714em;
+	color: darken($secondary-color, 20);
+	font-size: 1.125em;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.card-content {
+	position: relative;
+	z-index: 2;
+	padding: 1em;
+	background-color: white;
+}
+
+.subtitle {
+	display: block;
+	margin-top: 0.5em;
+	font-weight: 400;
+	font-size: 0.8125em;
+	color: lighten($text-color, 25);
+}
+
+/* HEADER */
+
+.car-config-header {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	max-width: $content-width;
+	margin-bottom: 4em;
+}
+
+.car-config-tabs {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+
+	.tab {
+		display: none;
+		flex: 1;
+		position: relative;
+		padding: 1.25em 1.5em;
+		text-transform: uppercase;
+		color: inherit;
+		text-decoration: none;
+		font-weight: 400;
+		opacity: 1;
+		// font-size: 1.125em;
+		background: linear-gradient(white,white) top no-repeat;
+		background-size: 100% 0;
+		transition: background-size .5s cubic-bezier(1, 0, 0, 1), opacity .25s cubic-bezier(1, 0, 0, 1);
+		
+		@include desktop {
+			display: block;
+			padding: 1.5em 1.75em;
+		}
+
+		&:hover {
+			background-size: 100% 100%;
+		}
+
+		&.is-disabled {
+			opacity: 0.3;
+		}
+
+		&.is-active {
+			display: block;
+			color: black;
+			pointer-events: none;
+			background-size: 100% 100%;
+		}
+
+		.arrow {
+
+		}
+
+		.subtitle {
+			margin-top: 0;
+			margin-bottom: 0.25em;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+	}
+
+	.tab-nav {
+		display: flex;
+		width: auto;
+		padding: 0.5em;
+		background-color: white;
+		flex-grow: 0;
+		justify-content: center;
+		align-items: center;
+
+		@include desktop {
+			display: none;
+		}
+
+		&.is-disabled {
+			opacity: 1;
+
+			i {
+				opacity: 0.3;
+			}
+		}
+
+		&:first-child {
+			padding-left: 1.5em;
+		}
+
+		&:last-child {
+			padding-right: 1.5em;
+		}
+
+		i {
+			width: 1em;
+			height: 1em;
+			padding: 0;
+		}
+	}
+}
+
+.total-price {
+	position: absolute;
+	bottom: 0;
+	right: 2em;
+	padding-bottom: 5vw;
+	border-bottom: 0.4em solid $secondary-color;
+
+	@include desktop {
+		padding-bottom: 2.5em;
+	}
+
+	.title {
+		display: block;
+		text-align: center;
+		font-size: 1.5em;
+	}
+
+	.subtitle {
+		display: block;
+		margin-bottom: 0.5em;
+		font-weight: 400;
+		font-size: 0.8125em;
+		color: lighten($text-color, 25);
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+/* RENDER */
+
+.render-wrapper {
+	margin-top: -3em;
+	height: 50vw;
+
+	@include desktop {
+		height: 28em;
+	}
+
+	.render {
+		height: 100%;
+		width: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
+
+/* CHOICE COMPONENT */
+
+.choice-group {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+
+	&:not(:last-child) {
+		margin-bottom: 2em;
+	}
+
+	&.multiple .choice.is-active a {
+		pointer-events: auto;
+	}
+}
+
+.choice {
+	width: 50%;
+	padding-bottom: .5em;
+	padding-right: .5em;
+	transition: opacity .25s cubic-bezier(0.86, 0, 0.07, 1);
+
+	@include desktop {
+		width: 25%;
+	}
+
+	a {
+		display: block;
+		height: 100%;
+		padding: 1.25em 1.5em;
+		color: inherit;
+		text-decoration: none;
+		font-weight: 500;
+		border-radius: 0.1875em;
+		transition: color .25s cubic-bezier(0.86, 0, 0.07, 1);
+
+		&:hover {
+			background-color: $background-color;
+		}
+	}
+
+	&.is-active {
+		a {
+			color: $primary-color;
+			pointer-events: none;
+			background-color: $background-color;
+		}
+	}
+}
+
+.choice-label {
+	display: block;
+	padding-left: 1.7142em;
+	margin-bottom: 1em;
+	letter-spacing: 0.0714em;
+	color: $secondary-color;
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+/* PROPERTY SPECIFIC CHOICE STYLE */
+
+.choice-color {
+	width: auto;
+	text-align: center;
+}
+
+.paint {
+	display: block;
+	width: 3em;
+	height: 3em;
+	margin-bottom: 1em;
+	// border-radius: 50%;
+	border-radius: .3125em;
+	border: 0.2em solid $background-color;
+}
+
+/* SUMMARY */
+
+.summary {
+	margin: 1.5em;
+}
+
+.summary-group {
+	margin-bottom: 1em;
+}
+
+.summary-label {
+	margin-bottom: 0.5em;
+	letter-spacing: 0.0714em;
+	color: $secondary-color;
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+
+.summary-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.summary-value {
+	display: block;
+	font-weight: 500;
+	margin-bottom: 0.5em;
+}
+
+.summary-price {
+	padding-right: 0em;
+}

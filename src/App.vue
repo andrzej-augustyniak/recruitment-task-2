@@ -22,33 +22,38 @@ export default {
 		 */
 		fetch('./public/data.json')
 		.then((response) => {
-			return response.json();
+		return response.json();
 		})
 		.then((data) => {
-			this.configData = data;
+		this.configData = data;
 		});
 	}
 }
 </script>
 
 <style lang="scss">
-	// Importing normalize.css, used by majority of the web
-	@import '~normalize.css/normalize.css';
-	
-	// Car config component is responsive, it's size is derived from html font-size
-	html {
-		height: 100%;
-		font-size: 16px;
-	}
+// Importing normalize.css, used by majority of the web
+@import '~normalize.css/normalize.css';
 
-	body {
-		display: flex;
-		flex-grow: 1;
-		min-height: 100%;
-	}
+// Car config component is responsive, it's size is derived from html font-size
+html {
+	height: 100%;
+	font-size: 16px;
+	box-sizing: border-box;
+}
 
-	#app {
-		display: flex;
-		flex-grow: 1;
-	}
+body {
+	display: flex;
+	flex-grow: 1;
+	min-height: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+#app {
+	display: flex;
+	flex-grow: 1;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="summary">
+	<div class="car-config-summary">
 		<p v-if="data.model !== null">{{ data.model.name }}</p>
 		<p v-if="data.engine !== null">{{ data.engine.name }}</p>
 		<p v-if="data.transmission !== null">{{ data.transmission.name }}</p>
@@ -14,7 +14,7 @@
 				type: Object,
 				required: true
 			}
-		}
+		},
 	}
 </script>
 

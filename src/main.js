@@ -1,3 +1,9 @@
+import lodash from 'lodash';
+window._ = lodash;
+
+import pluralize from 'pluralize';
+window.pluralize = pluralize;
+
 import Vue from 'vue';
 window.Vue = Vue;
 
