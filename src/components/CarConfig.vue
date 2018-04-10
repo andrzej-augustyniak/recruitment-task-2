@@ -260,9 +260,9 @@ export default {
 		// return car render url based on selection > currently based on color property
 		renderUrl: function() {
 			if(this.selection.color !== null) {
-				return 'url(/public/car/' + this.selection.color.id + '.png)';
+				return 'url(./public/car/' + this.selection.color.id + '.png)';
 			} else {
-				return 'url(/public/car/default.png)';
+				return 'url(./public/car/default.png)';
 			}
 		}
 	},
